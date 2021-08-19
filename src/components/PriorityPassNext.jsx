@@ -205,7 +205,7 @@ export default class PriorityPassNext extends Component {
 							/>
 						</div>
 						<div className='inputControl'>
-							<span>
+							{/* <span>
 								<Phone />
 							</span>
 							<input
@@ -216,7 +216,7 @@ export default class PriorityPassNext extends Component {
 								time
 								value={this.props.data.number}
 								onChange={this.onChangeHandler}
-							/>
+							/> */}
 						</div>
 					</div>
 				</form>

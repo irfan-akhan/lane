@@ -1,5 +1,5 @@
 const sendSMS = require('../../utils/twilio');
-const sendMAIL = require('../../utils/sendgrid');
+// const sendMAIL = require('../../utils/sendgrid');
 const Car = require('./car.model');
 
 // controllers
@@ -49,12 +49,12 @@ Need assistance? You can reach us on +2349030009452, +2349030009486 or +23490300
 			message
 			// `Hello, ${data.title} ${data.firstName} ${data.lastName} your car booking for ${date} at ${data.time} has been confirmed, reference ID: ${data.bookingReference} Thank you for choosing Shuttlelane`
 		);
-		sendMAIL(
-			`${data.email}`,
-			message
-			// `Hello, ${data.title} ${data.firstName} ${data.lastName} your car booking for ${date} at ${data.time} has been confirmed, reference ID: ${data.bookingReference} Thank you for choosing Shuttlelane`
-		);
-		console.log('sms in CONTROLLER', data.arrivalDate);
+		// sendMAIL(
+		// 	`${data.email}`,
+		// 	message
+		// 	// `Hello, ${data.title} ${data.firstName} ${data.lastName} your car booking for ${date} at ${data.time} has been confirmed, reference ID: ${data.bookingReference} Thank you for choosing Shuttlelane`
+		// );
+		// console.log('sms in CONTROLLER', data.arrivalDate);
 	} catch (error) {
 		console.log(error);
 		return res.status(500).json({ error });

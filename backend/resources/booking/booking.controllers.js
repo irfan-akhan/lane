@@ -1,5 +1,5 @@
 const sendSMS = require('../../utils/twilio');
-const sendMAIL = require('../../utils/sendgrid');
+// const sendMAIL = require('../../utils/sendgrid');
 const Booking = require('./booking.model');
 
 const getAll = async (req, res) => {
@@ -67,15 +67,15 @@ Need assistance? You can reach us on +2349030009452, +2349030009486 or +23490300
 			// `Hello, ${data.title} ${data.firstName} ${data.lastName} your Airport booking for ${date} at ${data.time} reference ID: ${data.bookingReference} has been confirmed, Thank you for choosing Shuttlelane`
 		);
 
-		sendMAIL(
-			`${data.email}`,
-			`Hello, ${data.title} ${data.firstName} ${data.lastName} your Airport booking for ${date} at ${data.time} reference ID: ${data.bookingReference} has been confirmed, Thank you for choosing Shuttlelane`
-		);
-		res.status(201).json({
-			data: doc,
-			message: 'Booking confirmed, Thank you for choosing shuttlelane.!',
-		});
-		console.log('sms in CONTROLLER', data.arrivalDate);
+		// sendMAIL(
+		// 	`${data.email}`,
+		// 	`Hello, ${data.title} ${data.firstName} ${data.lastName} your Airport booking for ${date} at ${data.time} reference ID: ${data.bookingReference} has been confirmed, Thank you for choosing Shuttlelane`
+		// );
+		// res.status(201).json({
+		// 	data: doc,
+		// 	message: 'Booking confirmed, Thank you for choosing shuttlelane.!',
+		// });
+		// console.log('sms in CONTROLLER', data.arrivalDate);
 	} catch (error) {
 		console.log(error);
 		return res.status(500).json({ error });
