@@ -100,8 +100,8 @@ const PriorityPass = () => {
 	};
 
 	bookingObj = {
-		...passengerDetails,
 		...data,
+		...passengerDetails,
 		amount:
 			parseInt(data.passengers) *
 			classes.filter((cabin) => cabin.name == data.cabinClass)[0]?.rate,
